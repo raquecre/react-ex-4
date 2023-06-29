@@ -1,6 +1,6 @@
 const Tittle = () =>{
     return(
-        <div className="exercise">Exercise 1</div>
+        <h1 className="exercise">Exercise 4</h1>
 
     )
 }

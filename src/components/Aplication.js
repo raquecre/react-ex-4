@@ -1,13 +1,15 @@
 import BigInput from './BigInput'
 import DisplayPrimeNumbers from './DisplayPrimeNumbers'
+import { useState } from 'react'
+const Aplication = (props) => {
 
-const Aplication = () => {
-
-    return(
+    const [query, setQuery] = useState();
+   
+    return (
         <div className='Aplication'>
             <h2>Aplication</h2>
-            <BigInput></BigInput>
-            <DisplayPrimeNumbers></DisplayPrimeNumbers>
+            <BigInput onQuery={setQuery} />
+            <DisplayPrimeNumbers query ={query} />
         </div>
     )
 }
