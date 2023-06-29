@@ -1,9 +1,12 @@
 import { queries } from "@testing-library/react";
 import { useState } from "react";
+import convert from "convert";
 
 
 const DisplayPrimeNumbers = (props) => {
     const { query } = props;
+    const queryNumber = parseInt({ query })
+    console.log(queryNumber)
 
     const [result, setResult] = useState(0);
 
@@ -14,7 +17,7 @@ const DisplayPrimeNumbers = (props) => {
             return true;
 
         for (let i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) return false;//aquí descarta tanto impares como pares
+            if (num % i == 0) return false;
         }
         return true;
     }
@@ -31,12 +34,10 @@ const DisplayPrimeNumbers = (props) => {
             inums++;
             i++;
         }
-        return setResult(primeNumbers)
+        return primeNumbers;
 
     }
-  
-   
-
+    console.log(generateNumbers({ query }));
     return (
         <div className="DisplayPrimeNumbers">
             <h2>Display Prime Numbers</h2>
@@ -44,6 +45,6 @@ const DisplayPrimeNumbers = (props) => {
             <p> {result} </p>
         </div>
     )
-}
 
-export default DisplayPrimeNumbers;
+}
+export default DisplayPrimeNumbers

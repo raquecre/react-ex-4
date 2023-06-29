@@ -1,7 +1,7 @@
 const TextInfo = () => {
     return (
         <div className="textInfo">
-            <p> Increment the number of like when you click on it</p>
+            <p> When the user type some information in the input, it should change the list of prime numbers</p>
         </div>
     )
 }
