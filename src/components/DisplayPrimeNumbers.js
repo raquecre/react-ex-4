@@ -6,6 +6,7 @@ import convert from "convert";
 const DisplayPrimeNumbers = (props) => {
     const { query } = props;
     const queryNumber = parseInt({ query })
+    console.log({ query });
     console.log(queryNumber)
 
     const [result, setResult] = useState(0);
@@ -21,7 +22,7 @@ const DisplayPrimeNumbers = (props) => {
         }
         return true;
     }
-
+   
     function generateNumbers(numberCreate) {
         let inums = 1;
         let i = 0
@@ -42,7 +43,7 @@ const DisplayPrimeNumbers = (props) => {
         <div className="DisplayPrimeNumbers">
             <h2>Display Prime Numbers</h2>
             <p>Prime numbers until limit = <strong>{query} </strong> </p>
-            <p> {result} </p>
+            <p> {generateNumbers(query)}</p>
         </div>
     )
 
